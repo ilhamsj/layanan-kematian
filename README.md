@@ -14,6 +14,9 @@ DB_DATABASE=passportsystem
 DB_USERNAME=root
 DB_PASSWORD= 
 ``
-7. ``php artisan migrate``
 8. ``php artisan make:model Passport -m`` akan membuat file [Passport.php](database/migrations/2018_12_11_133435_create_passports_table.php) dan [create_passports_table](app/Passport.php)
-9. 
+9. Tambahkan di [AppServiceProvider.php](app/Providers/AppServiceProvider.php)
+`` use Illuminate\Support\Facades\Schema; ``  
+
+`` Schema::defaultStringLength(191);``
+10. ``php artisan migrate``
