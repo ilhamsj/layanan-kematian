@@ -20,3 +20,7 @@ DB_PASSWORD=
 
 `` Schema::defaultStringLength(191);``
 10. ``php artisan migrate``
+11. Merubah halaman pertama dibuka (laravel default ngebuka welcome), misal kita mau ngebuka create passport pertama kali
+12. ``resources\views`` buat file baru ``create.blade.php``
+13. Merubah settingan default dari welcome ke create
+14. ``[routes\web.php](routes\web.php)`` ubah ``welcome`` ke ``create`` 
