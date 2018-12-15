@@ -11,6 +11,7 @@
                 padding-top: 1.5rem;
                 padding-bottom: 1.5rem;
                 font-family: source sans pro !important;
+                min-height: 500px;
             }
 
             /* Everything but the jumbotron gets side spacing for mobile first views */

@@ -4,7 +4,6 @@
 <div class="jumbotron">
         <h1 class="display-3">{{$title}}</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="index.html#" role="button">Sign up today</a></p>
       </div>
 
       <div class="row marketing">
