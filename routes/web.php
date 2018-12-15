@@ -11,13 +11,18 @@
 |
 */
 
+/*
+Route::get('/users/{id}', function ($id) {
+    return 'Your name ' . $id;
+});
+*/
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::resource('passports','PassportController');
 
-
-Route::get('/users/{id}', function ($id) {
-    return 'Your name ' . $id;
+Route::get('/about', function () {
+    return view('about');
 });
