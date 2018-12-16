@@ -9,13 +9,14 @@
     </p>
   </div>
 
-  @if (count($posts) > 0)
+  @if (count($posts) > 1)
       @foreach ($posts as $post)
           <div class="row marketing">
-            <div class="col-lg-6">
+            <div class="col">
               <h4>
                 <a href="/posts/{{$post->id}}">{{$post->title}}</a>
               </h4>
+            <p>{{$post->body}}</p>
             </div>
           </div>
       @endforeach

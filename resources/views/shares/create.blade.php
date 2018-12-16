@@ -1,4 +1,4 @@
-<form action="{{ route('posts.store') }}" method="post">
+<form action="{{ route('shares.store') }}" method="post">
     @csrf
     <p>
         <label for="share_name">Share Name</label><br>
