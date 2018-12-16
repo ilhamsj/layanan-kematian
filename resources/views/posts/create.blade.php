@@ -1,10 +1,6 @@
-{{-- laravelcollective --}}
 
-@extends('layouts.app')
 
-@section('content')
-
-    <form action="{{action('PostsController@store')}}" method="POST" >
+    <form action="{{'posts.store'}}" method="POST" >
         @csrf
 
         <div class="form-group">
@@ -21,4 +17,3 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form> 
-@endsection

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-use DB;
+// use DB;
 
 class PostsController extends Controller
 {
@@ -41,13 +41,21 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $posts = new Posts;
-        $posts->title = $request->input('title');
-        $posts->body = $request->input('body');
-        $posts->save();
+        /*
+        $request -> validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
 
-        return redirect('posts.store');
+        $post = new Post([
+            'title' => $request->get('title'),
+            'body' => $request->get('body')
+        ]);
+
+        $post->save();
+        */
+
+        return redirect('/posts');
     }
 
     /**
