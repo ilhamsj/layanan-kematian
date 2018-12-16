@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  @if (count($posts) > 1)
+  @if (count($posts) > 0)
       @foreach ($posts as $post)
         <div class="row marketing">
           <div class="col">
