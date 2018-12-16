@@ -19,7 +19,7 @@ class PostsController extends Controller
         // return Post::where('title', 'Post Two')->get();
         // $posts = DB::select('SELECT * FROM posts');
 
-        $posts = Post::orderBy('created_at', 'dsc')->paginate(10);
+        $posts = Post::orderBy('updated_at', 'dsc')->paginate(10);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -76,7 +76,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit')->with('post', $post);
     }
 
     /**
@@ -88,7 +89,17 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        $post = Post::find($id);
+        $post->title = $request->get('title');
+        $post->body = $request->get('body');
+        $post->save();
+
+        return redirect('/posts');
     }
 
     /**
@@ -99,6 +110,9 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        return redirect('/posts');
     }
 }

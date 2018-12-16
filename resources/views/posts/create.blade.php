@@ -11,7 +11,7 @@
 
         <div class="form-group">
             <label for="body">Body Content</label>
-            <input type="text" class="form-control" name="body" id="">
+            <textarea class="form-control" name="body" rows="15"></textarea>
         </div>
 
         <div class="form-group">
