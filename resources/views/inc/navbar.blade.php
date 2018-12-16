@@ -7,6 +7,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/posts')}}">Blog</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/posts/create')}}">New Posts</a>
+            </li>
         </ul>
     </nav>
     <h3 class="text-muted">{{config('app.name')}}</h3>
